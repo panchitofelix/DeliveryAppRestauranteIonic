@@ -30,7 +30,7 @@ export class HomePage implements OnInit {
     },
     {
       title: 'Pedidos',
-      url: '/folder/Inbox',
+      url: '/orders',
       icon: 'basket-outline'
     },
     {

@@ -91,6 +91,15 @@ const routes: Routes = [
       {
         path: 'info',
         loadChildren: () => import('../restaurant/restaurant-info/restaurant-info.module').then( m => m.RestaurantInfoPageModule)
+      },
+      {
+        path: 'orders',
+        children: [
+          {
+            path: '',
+            loadChildren: () => import('../orders/order-list/order-list.module').then( m => m.OrderListPageModule)
+          }
+        ]
       }
     ]
   }
