@@ -10,8 +10,12 @@ const routes: Routes = [
     children: [
       {
         path: '',
-        redirectTo: 'cardapio',
+        redirectTo: 'dashboard',
         pathMatch: 'full'
+      },
+      {
+        path: 'dashboard',
+        loadChildren: () => import('../dashboard/dashboard/dashboard.module').then(m => m.DashboardPageModule)
       },
       {
         path: 'cardapio',
